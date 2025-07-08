@@ -9,7 +9,7 @@ type Post = {
 };
 
 export default async function PostsSequential() {
-  const response = await fetch('http://localhost:9090/blog-posts');
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post`);
 
   if (!response.ok) {
     throw new Error('mock 가져오기 실패');
