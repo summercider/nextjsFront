@@ -1,8 +1,4 @@
-import { notFound, redirect } from 'next/navigation';
-
-function getRandomInt(count: number) {
-  return Math.floor(Math.random() * count);
-}
+import { redirect } from 'next/navigation';
 
 export default async function ReviewDeails({
   params,

@@ -82,7 +82,7 @@ export default function Articles({
   useEffect(() => {
     params.set('page', page.toString());
     router.push(`?${params.toString()}`);
-  }, [page]);
+  }, [page, params, router]);
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

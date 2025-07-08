@@ -10,14 +10,14 @@ type User = {
   lang: string;
 };
 
-type User2 = Partial<User>;
+// type User2 = Partial<User>;
 
 export default function Child() {
   const queryClient = useQueryClient();
   // console.log('클라이언트컴포넌트');
 
   //react hook사용시 동적추가되는 데이터에 대한 타입을 지정해야함 <제너릭으로>
-  const { isPending, data, isError, error } = useQuery<User[]>({
+  const { isPending, data, isError } = useQuery<User[]>({
     queryKey: ['user'],
     queryFn: () => {
       return fetch('http://localhost:9090/user').then((res) => res.json());

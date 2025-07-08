@@ -1,6 +1,5 @@
 import { formatDate } from '@/app/_lib/utils';
 import Child from '@/app/ui/home/Child';
-import Child2 from '@/app/ui/home/Child2';
 import Link from 'next/link';
 
 export default function Home() {
